@@ -17,3 +17,21 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+(async()=>{
+    let get = await axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    
+    let articles = Object.values(get.data.articles);
+    let count = 1;
+    articles.forEach((cat) => {
+        cat.forEach((topic) => {
+            el('div', '.cards-container', { id: `I${count}`, classname: 'card' })
+            el('div', `#I${count}`, { classname: 'headline', text: `${topic.headline}` })
+            el('div', `#I${count}`, { classname: 'author' })
+            el('div', `#I${count} .author`, { classname: 'img-container' })
+            el('img', `#I${count} .img-container`, { src: topic.authorPhoto })
+            el('span', `#I${count}`, { text: `By ${topic.authorName}` })
+            count++;
+        })
+    })
+})();

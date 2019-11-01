@@ -7,3 +7,10 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+(async()=>{
+    let get = await axios.get('https://lambda-times-backend.herokuapp.com/topics')
+    get.data.topics.map((topic)=>{
+        el('div','.topics',{text:topic,classname:'tab'})
+    })
+})();
