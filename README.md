@@ -29,14 +29,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+DOM means Document Object Model. Containes the markup that is rendered  to the browser as well as methods that devs can use.
 
 2. What is an event?
+An even is an action/input from the user or its browser.
 
 3. What is an event listener?
+An even listener listens for the even and then executes a function when the event occurs.
 
 4. Why would we convert a NodeList into an Array?
+To be able to use array methods.
 
 5. What is a component?
+Re-usable code that usually consist of complex operations or layouts.
 
 ### Git Set up
 
